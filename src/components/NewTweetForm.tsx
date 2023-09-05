@@ -9,6 +9,9 @@ function updateTextAreaSize(textArea?: HTMLTextAreaElement) {
     textArea.style.height = `${textArea.scrollHeight}px`;
 }
 
+function Form() {
+
+}
 export function NewTweetForm() {
     const session = useSession();
     const [inputValue, setInputValue] = useState("");
@@ -29,7 +32,7 @@ export function NewTweetForm() {
         <div className="flex gap-4">
             <ProfileImage src={session.data.user.image} />
             <textarea
-                ref={textAreaRef}
+                ref={inputRef}
                 className="flex-grow resize-none overflow-hidden p-4 text-lg outline-none"
                 placeholder="What's happening?"
                 style={{ height: 0 }}
